@@ -1,0 +1,30 @@
+{
+  "name": "To_Do_List",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start_backend": "cd Mongo_Operations/ && npm install && cd ../To_Do_Curd_API && npm install && kill -9 $(lsof -t -i:4000) && npm run withoutdebug ",
+    "start_frontend":"cd angular6-frontend/ && npm install && kill -9 $(lsof -t -i:4200) && ng serve --port=4200 -o",
+    "start":"./serverStart.sh",
+    "After_Some_Change_debug": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm  start ",
+    "After_Some_Change": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm run withoutdebug ",
+    "test": "npm run api_test",
+    "mongo_test": "cd Mongo_Operations/ && npm test",
+    "api_test": "cd MVC_Pattern_API/To_Do_List/ && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZealShah1996/To_Do_List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZealShah1996/To_Do_List/issues"
+  },
+  "homepage": "https://github.com/ZealShah1996/To_Do_List#readme",
+  "dependencies": {
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}

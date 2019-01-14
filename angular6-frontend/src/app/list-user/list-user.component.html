@@ -1,0 +1,28 @@
+<div class="col-md-6">
+  <h2> User Details</h2>
+  <button class="btn btn-danger" (click)="addUser()"> Add {{this.addLabelName}}</button>
+
+  <div>
+ <table class="table table-striped">
+    <thead>
+    <tr>
+      <th *ngFor="let header of this.tableHeaders">
+        {{header}}
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of this.tableRows">
+       <td *ngFor="let header of this.tableHeaders">
+        {{row[header]}}
+      </td>
+      <td><button class="btn btn-danger" (click)="deleteUser(row.id)"> Delete</button>
+        <button class="btn btn-danger" (click)="editUser(row.id)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+<div *ngIf="this.noDataAvaiable==true">
+  No Data Is Avaiable.
+</div>
+</div>

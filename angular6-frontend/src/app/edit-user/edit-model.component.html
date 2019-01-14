@@ -1,0 +1,35 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit User</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group" hidden>
+      <label for="{{this.stringfy(formField.value)}}">Id:</label>
+      <input type="{{this.stringfy(formField.value)}}" formControlName="{{this.stringfy(formField.value)}}" placeholder="{{this.stringfy(formField.value)}}" name="{{this.stringfy(formField.value)}}" class="form-control" id="{{this.stringfy(formField.value)}}">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input formControlName="name" placeholder="name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+    </div> -->
+    <div formArrayName="formFields">
+      <div *ngFor="let formField of editForm.controls.formFields.controls; let i=index" class="panel panel-default">
+        <div class="form-group" >
+          <!-- {{let formField.value)=formField.value)}} -->
+          <span>{{formField.hidden}}</span>
+          <label for="{{this.stringfy(formField.value)}}">{{this.stringfy(formField.value)}}</label>
+          <input type="{{this.stringfy(formField.value)}}" placeholder="{{this.stringfy(formField.value)}}"
+            name="{{this.stringfy(formField.value)}}" 
+            [(ngModel)]="this.modelData[this.stringfy(formField.value)]"
+            [ngModelOptions]="{standalone: true}"
+            class="form-control" id="{{this.stringfy(formField.value)}}"
+            [value]="findingValueOfkey(this.stringfy(formField.value))">
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
