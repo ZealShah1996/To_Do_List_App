@@ -158,7 +158,7 @@ describe('to do list API Testing....', function () {
 describe('to do list API Testing....', function () {
     var tests = [];
     var requiredFields = 'id,task_text,todolist_id,is_complete';
-    let modelName = "todolistsitem";
+    let modelName = "todolistsitems";
     let defaultDataPassedForCreation = {"task_text":"test1","todolist_id":1,"is_complete":false};
    // let defaultDataPassedForLogin = {"username":"test1","password":"test1"};
     let wrongdatatotest={"task_text":"test1","todolist_id":1,"is_complete":false};
