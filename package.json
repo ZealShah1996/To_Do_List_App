@@ -10,8 +10,8 @@
     "After_Some_Change_debug": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm  start ",
     "After_Some_Change": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm run withoutdebug ",
     "test": "./testOfServer.sh",
-    "mongo_test": "cd Mongo_Operations/ && npm test",
-    "todolistapi_test":"cd To_Do_Curd_API/ && npm test",
+    "mongo_test": "cd Mongo_Operations/ && npm install && npm test",
+    "todolistapi_test":"cd To_Do_Curd_API/ && npm intsall && npm test",
     "api_test": "cd MVC_Pattern_API/To_Do_List/ && npm test"
   },
   "repository": {
