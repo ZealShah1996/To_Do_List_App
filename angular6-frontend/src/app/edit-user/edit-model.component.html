@@ -1,5 +1,5 @@
 <div class="col-md-6">
-  <h2 class="text-center">Edit User</h2>
+  <h2 class="text-center">Edit {{this.module}}</h2>
   <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
     <!-- <div class="form-group" hidden>
       <label for="{{this.stringfy(formField.value)}}">Id:</label>
@@ -22,7 +22,7 @@
           <span>{{formField.hidden}}</span>
           <label for="{{this.stringfy(formField.value)}}">{{this.stringfy(formField.value)}}</label>
           <input type="{{this.stringfy(formField.value)}}" placeholder="{{this.stringfy(formField.value)}}"
-            name="{{this.stringfy(formField.value)}}" 
+            name="{{this.stringfy(formField.value)}}"
             [(ngModel)]="this.modelData[this.stringfy(formField.value)]"
             [ngModelOptions]="{standalone: true}"
             class="form-control" id="{{this.stringfy(formField.value)}}"
