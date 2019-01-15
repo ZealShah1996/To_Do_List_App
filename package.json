@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start_backend": "cd Mongo_Operations/ && npm install && npm test && cd ../To_Do_Curd_API  && npm install && npm test  && kill -9 $(lsof -t -i:4000) && npm run withoutdebug ",
-    "start_frontend":"cd angular6-frontend/ && npm install && kill -9 $(lsof -t -i:4200) && ng serve --port=4200 -o",
+    "start_backend": "cd Mongo_Operations/ && npm install && cd ../To_Do_Curd_API  && npm install && npm run withoutdebug ",
+    "start_frontend":"cd angular6-frontend/ && npm install  && ng serve --port=4200 -o",
     "start":"./serverStart.sh",
     "After_Some_Change_debug": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm  start ",
     "After_Some_Change": "cd Mongo_Operations/ && npm install && cd ../MVC_Pattern_API/To_Do_List/ && npm install && npm run withoutdebug ",
-    "test": "npm run api_test",
+    "test": "./testOfServer.sh",
     "mongo_test": "cd Mongo_Operations/ && npm test",
+    "todolistapi_test":"cd To_Do_Curd_API/ && npm test",
     "api_test": "cd MVC_Pattern_API/To_Do_List/ && npm test"
   },
   "repository": {
